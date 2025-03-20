@@ -1,6 +1,8 @@
 library(marinecs100b)
 library(ggplot2)
 
+read.csv(woa_sal)
+
 # Questionable organization choices ---------------------------------------
 
 # P1 Call the function dir() at the console. This lists the files in your
@@ -28,9 +30,11 @@ read.csv("woa.csv")
 # set.
 
 # P4 Re-write the call to read.csv() to avoid the error in P3.
-woa <- read.csv("woa.csv", header = FALSE, sep = "", fill = TRUE,
-         quote = "", skip = 1)
+woa <- read.csv("woa.csv", sep = "", fill = TRUE,
+                quote = "", skip = 1 )
+woa <- read.csv("woa.csv", fill = TRUE, skip = 1)
 
+?read.csv(woa)
 
 # Fix the column names ----------------------------------------------------
 
